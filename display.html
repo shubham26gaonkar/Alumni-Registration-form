@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Display Info</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <style>
+            form{
+                /* border: 2px solid  black; */
+                text-align: center;
+                margin: auto;
+                background-color: rgba(8, 50, 36, 0.3);
+                border-radius: 20px;
+                font-family: 'Ubuntu', sans-serif;
+                color: white;
+                padding: 50px;
+            }
+            body{
+                background: linear-gradient(to right, black , rgb(103, 155, 114), black)
+            }
+        </style>
+    </head>
+    <body style="display: flex; justify-content: center">
+        <form class="container">
+        
+            <h1 style="align-content: center">HEY!! 
+                <br><span id="fName"></span><span> </span><span id="lName"></span>
+                ( <span id="showEmail"></span> )<br>
+                From <span id="showAdress"></span><br>
+                From Batch of <span id="showYear"></span>-
+                <span id="showProgram"></span><br><br>
+                Thank you for registering!!
+            </h1>
+    
+        </form>
+        <script>
+                document.getElementById("fName").innerHTML = localStorage.getItem("name");
+                document.getElementById("lName").innerHTML = localStorage.getItem("name2");
+                document.getElementById("showEmail").innerHTML = localStorage.getItem("email");
+                document.getElementById("showAdress").innerHTML = localStorage.getItem("adress");
+                document.getElementById("showProgram").innerHTML = localStorage.getItem("program");
+                document.getElementById("showYear").innerHTML = localStorage.getItem("year");
+                localStorage.clear();
+        </script>
+    </body>
+</html>
